@@ -8,12 +8,13 @@ running = True
 
 def start():
 	os.system("color a")
-	demande = input("Tapez 'prêt' : ")
+	print("Pile = heads     Face = tails")
+	demande = input("Tapez 'go' / type 'go' : ")
 
-	if demande == "prêt":
+	if demande == "go":
 		game()
 	else:
-		print("Veuillez écrire prêt et pas autre chose !")
+		print("Veuillez écrire go et pas autre chose ! / Please write go and nothing else !")
 
 
 def running():
@@ -24,14 +25,16 @@ def running():
 
 
 def restart():
-	restart = input("Voulez vous rejouer ? (oui ou non) : ")
+	restart = input("Voulez vous rejouer ? (oui ou non) / Do you want to play again? (yes or no) : ")
 
 	if restart == "oui":
+		game()
+	elif restart == "yes":
 		game()
 	else: 
 		running = False
 		os.system("color 7")
-		print("Merci d'avoir joué !")
+		print("Merci d'avoir joué ! / Thanks for playing !")
 
 
 def game():

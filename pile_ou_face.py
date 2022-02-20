@@ -9,6 +9,7 @@ running = True
 def start():
 	os.system("color a")
 	print("Pile = heads     Face = tails")
+	print(" ")
 	demande = input("Tapez 'go' / type 'go' : ")
 
 	if demande == "go":
@@ -34,16 +35,21 @@ def restart():
 	else: 
 		running = False
 		os.system("color 7")
+		os.system("cls")
 		print("Merci d'avoir joué ! / Thanks for playing !")
 
 
 def game():
 	gen = random.randrange(3)
 	if gen == 1:
+		print(" ")
 		print("Pile !")
+		print(" ")
 		restart()
 	elif gen == 2:
+		print(" ")
 		print("Face !")
+		print(" ")
 		restart()
 	else:
 		game()
